@@ -16,6 +16,12 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "pugixml", "pugixml", "{F48C
 		..\libs\pugixml\pugixml.hpp = ..\libs\pugixml\pugixml.hpp
 	EndProjectSection
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "docs", "docs", "{B172403F-940A-42B3-A296-FE72DD012203}"
+	ProjectSection(SolutionItems) = preProject
+		docs\Daemon Process Manager.docx = docs\Daemon Process Manager.docx
+		docs\Daemon Process Manager.pdf = docs\Daemon Process Manager.pdf
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|ARM = Debug|ARM
