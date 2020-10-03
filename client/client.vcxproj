@@ -1,0 +1,161 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|ARM">
+      <Configuration>Debug</Configuration>
+      <Platform>ARM</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|ARM">
+      <Configuration>Release</Configuration>
+      <Platform>ARM</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|ARM64">
+      <Configuration>Debug</Configuration>
+      <Platform>ARM64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|ARM64">
+      <Configuration>Release</Configuration>
+      <Platform>ARM64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x86">
+      <Configuration>Debug</Configuration>
+      <Platform>x86</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x86">
+      <Configuration>Release</Configuration>
+      <Platform>x86</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{20045019-410f-4191-8898-d12e39bcafbc}</ProjectGuid>
+    <Keyword>Linux</Keyword>
+    <RootNamespace>client</RootNamespace>
+    <MinimumVisualStudioVersion>15.0</MinimumVisualStudioVersion>
+    <ApplicationType>Linux</ApplicationType>
+    <ApplicationTypeRevision>1.0</ApplicationTypeRevision>
+    <TargetLinuxPlatform>Generic</TargetLinuxPlatform>
+    <LinuxProjectType>{2238F9CD-F817-4ECC-BD14-2524D2669B35}</LinuxProjectType>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'" Label="Configuration">
+    <UseDebugLibraries>true</UseDebugLibraries>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|ARM'" Label="Configuration">
+    <UseDebugLibraries>false</UseDebugLibraries>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x86'" Label="Configuration">
+    <UseDebugLibraries>true</UseDebugLibraries>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x86'" Label="Configuration">
+    <UseDebugLibraries>false</UseDebugLibraries>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <RemoteRootDir>dpm</RemoteRootDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <RemoteRootDir>/root/dpm/</RemoteRootDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|ARM64'" Label="Configuration">
+    <UseDebugLibraries>false</UseDebugLibraries>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|ARM64'" Label="Configuration">
+    <UseDebugLibraries>true</UseDebugLibraries>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings" />
+  <ImportGroup Label="Shared" />
+  <ImportGroup Label="PropertySheets" />
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <OutDir>../bin/</OutDir>
+    <IntDir>../obj/$(ProjectName)/</IntDir>
+    <RemoteProjectDir>$(RemoteRootDir)/</RemoteProjectDir>
+    <RemoteDeployDir>$(RemoteRootDir)/bin/</RemoteDeployDir>
+    <TargetName>pmc</TargetName>
+    <TargetExt />
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <OutDir>$(ProjectDir)\..\bin\$(Platform)\$(Configuration)\</OutDir>
+    <TargetName>pmc</TargetName>
+    <IntDir>$(ProjectDir)obj\$(Platform)\$(Configuration)\</IntDir>
+    <RemoteProjectDir>$(RemoteRootDir)</RemoteProjectDir>
+    <RemoteDeployDir>$(RemoteProjectDir)</RemoteDeployDir>
+    <TargetExt />
+  </PropertyGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\libs\pugixml\pugixml.cpp" />
+    <ClCompile Include="..\common\base_poll_manager.cpp" />
+    <ClCompile Include="..\common\cmd_def.cpp" />
+    <ClCompile Include="..\common\err_def.cpp" />
+    <ClCompile Include="..\common\exception_base.cpp" />
+    <ClCompile Include="..\common\logger.cpp" />
+    <ClCompile Include="..\common\master_slave_mutex.cpp" />
+    <ClCompile Include="..\common\PDU.cpp" />
+    <ClCompile Include="..\common\shm_templates.cpp" />
+    <ClCompile Include="..\common\socket_manager.cpp" />
+    <ClCompile Include="..\common\sys_variant.cpp" />
+    <ClCompile Include="..\common\utils.cpp" />
+    <ClCompile Include="client.cpp" />
+    <ClCompile Include="client_config.cpp" />
+    <ClCompile Include="cli_handler.cpp" />
+    <ClCompile Include="cmd_manager.cpp" />
+    <ClCompile Include="help_def.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\libs\pugixml\pugiconfig.hpp" />
+    <ClInclude Include="..\..\libs\pugixml\pugixml.hpp" />
+    <ClInclude Include="..\common\cmd_def.hpp" />
+    <ClInclude Include="..\common\common_def.h" />
+    <ClInclude Include="..\common\err_def.hpp" />
+    <ClInclude Include="..\common\exception_base.hpp" />
+    <ClInclude Include="..\common\exception_def.hpp" />
+    <ClInclude Include="..\common\logger.hpp" />
+    <ClInclude Include="..\common\master_slave_mutex.hpp" />
+    <ClInclude Include="..\common\PDU.hpp" />
+    <ClInclude Include="..\common\shmm.hpp" />
+    <ClInclude Include="..\common\shm_templates.hpp" />
+    <ClInclude Include="..\common\socket_manager.hpp" />
+    <ClInclude Include="..\common\sys_variant.hpp" />
+    <ClInclude Include="..\common\utils.hpp" />
+    <ClInclude Include="..\common\xmlconfig_def.h" />
+    <ClInclude Include="client_config.hpp" />
+    <ClInclude Include="cli_handler.hpp" />
+    <ClInclude Include="cmd_manager.hpp" />
+    <ClInclude Include="help_def.hpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="pmc.config" />
+  </ItemGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <RemotePostBuildEvent>
+      <Command>cp  ~/$(RemoteProjectDir)/projects/client/pmc.config ~/$(RemoteProjectDir)/projects/client/bin/$(Platform)/$(Configuration)/pmc.config</Command>
+    </RemotePostBuildEvent>
+    <ClCompile>
+      <AdditionalOptions>-pthread</AdditionalOptions>
+    </ClCompile>
+    <Link>
+      <AdditionalOptions>-pthread</AdditionalOptions>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">
+    <PreBuildEvent>
+      <Command>
+      </Command>
+    </PreBuildEvent>
+    <CustomBuildStep>
+      <Command>-pthread</Command>
+    </CustomBuildStep>
+  </ItemDefinitionGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets" />
+</Project>

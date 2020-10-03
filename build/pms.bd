@@ -1,0 +1,17 @@
+#!/bin/bash
+
+echo "Building server project in debug mode..."
+
+mkdir -p ../out/bin/debug
+
+cd ../out/bin/debug
+
+g++ -g -pthread -o pms ../../../server/config_manager.cpp ../../../server/global_lock.cpp ../../../server/proc_def.cpp ../../../server/proc_manager.cpp ../../../server/proc_poll_manager.cpp ../../../server/request_data.cpp ../../../server/request_handler.cpp ../../../server/server.cpp ../../../server/server_config.cpp ../../../server/xmlconfig_parser.cpp ../../../../libs/pugixml/pugixml.cpp ../../../common/cmd_def.cpp ../../../common/err_def.cpp ../../../common/exception_base.cpp ../../../common/logger.cpp ../../../common/master_slave_mutex.cpp ../../../common/PDU.cpp ../../../common/socket_manager.cpp ../../../common/sys_variant.cpp ../../../common/utils.cpp ../../../server/command_handlers/base_cmd_handler.cpp ../../../server/command_handlers/config_cmd_handler.cpp ../../../server/command_handlers/proc_cmd_handler.cpp ../../../server/command_handlers/settings_cmd_handler.cpp
+
+echo "Copying pmc.config to the output directory..."
+
+cp ../../../server/pms.config pms.config
+
+echo "Copying process_configuration.xml to the output directory..."
+
+cp ../../../server/process_configuration.xml process_configuration.xml

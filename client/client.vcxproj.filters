@@ -1,0 +1,116 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="common">
+      <UniqueIdentifier>{fa2e339d-2881-4438-ae36-90a8b62c9a37}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="data">
+      <UniqueIdentifier>{5fe33711-f638-4652-bc94-b160cceaf667}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="pugixml">
+      <UniqueIdentifier>{6c9c780f-6970-4292-8ee0-ad8ebc234e06}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="client.cpp" />
+    <ClCompile Include="cli_handler.cpp" />
+    <ClCompile Include="cmd_manager.cpp" />
+    <ClCompile Include="help_def.cpp" />
+    <ClCompile Include="client_config.cpp" />
+    <ClCompile Include="..\..\libs\pugixml\pugixml.cpp">
+      <Filter>pugixml</Filter>
+    </ClCompile>
+    <ClCompile Include="..\common\base_poll_manager.cpp">
+      <Filter>common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\common\cmd_def.cpp">
+      <Filter>common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\common\err_def.cpp">
+      <Filter>common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\common\exception_base.cpp">
+      <Filter>common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\common\logger.cpp">
+      <Filter>common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\common\master_slave_mutex.cpp">
+      <Filter>common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\common\PDU.cpp">
+      <Filter>common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\common\shm_templates.cpp">
+      <Filter>common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\common\socket_manager.cpp">
+      <Filter>common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\common\sys_variant.cpp">
+      <Filter>common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\common\utils.cpp">
+      <Filter>common</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="cli_handler.hpp" />
+    <ClInclude Include="cmd_manager.hpp" />
+    <ClInclude Include="help_def.hpp" />
+    <ClInclude Include="client_config.hpp" />
+    <ClInclude Include="..\..\libs\pugixml\pugiconfig.hpp">
+      <Filter>pugixml</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\libs\pugixml\pugixml.hpp">
+      <Filter>pugixml</Filter>
+    </ClInclude>
+    <ClInclude Include="..\common\cmd_def.hpp">
+      <Filter>common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\common\common_def.h">
+      <Filter>common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\common\err_def.hpp">
+      <Filter>common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\common\exception_base.hpp">
+      <Filter>common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\common\exception_def.hpp">
+      <Filter>common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\common\logger.hpp">
+      <Filter>common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\common\master_slave_mutex.hpp">
+      <Filter>common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\common\PDU.hpp">
+      <Filter>common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\common\shm_templates.hpp">
+      <Filter>common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\common\shmm.hpp">
+      <Filter>common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\common\socket_manager.hpp">
+      <Filter>common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\common\sys_variant.hpp">
+      <Filter>common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\common\utils.hpp">
+      <Filter>common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\common\xmlconfig_def.h">
+      <Filter>common</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="pmc.config">
+      <Filter>data</Filter>
+    </None>
+  </ItemGroup>
+</Project>

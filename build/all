@@ -1,0 +1,10 @@
+#!/bin/bash
+cd /root/kushan/dpm/projects/build
+chmod 777 pmc.br
+chmod 777 pms.br
+chmod 777 pms.bd
+chmod 777 pmc.bd
+./pmc.br&
+./pms.bd&
+./pms.br&
+./pmc.bd&

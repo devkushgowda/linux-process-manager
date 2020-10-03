@@ -1,0 +1,123 @@
+<?xml version="1.0"?>
+<ProcessConfigurationStore configVersion="1.0">
+  <Groups>
+    <Group id="default" description="First application setup.">
+      <Shm id="test1" name="SharedMemory" shmId="123" shmPath="/root"/>
+      <Shm id="test2" name="SharedMemory" shmId="1234" shmPath="/root"/>
+      <Process  id="test1" name="Test-1 : Valid application." path="~/kushan/localrepo/test/test1" delay="1" maxInstance="3">
+        <Dependency>
+          <Process id="test2"/>
+          <Shm id="test1"/>
+        </Dependency>
+        <Flags>
+          <Flag name="isSystemCommand" value="false"/>
+          <Flag name="isKillMany" value="true"/>
+          <Flag name="isRestartAll" value="false"/>
+          <Flag name="isMonitor" value="true"/>
+        </Flags>
+        <Variables>
+          <Args>
+            <Arg value="Argument01" ignore="false" />
+            <Arg value="Argument02" ignore="false" />
+            <Arg value="Argument03" ignore="true" />
+            <Arg value="Argument04" ignore="false" />
+          </Args>
+          <Envs>
+            <Env value="Environmet01=X" ignore="true" />
+          </Envs>
+        </Variables>
+      </Process>
+      <Process  id="test2" name="Test-2 : Valid application." path="~/kushan/localrepo/test/test1" delay="3" maxInstance="3">
+        <Flags>
+          <Flag name="isSystemCommand" value="false"/>
+          <Flag name="isKillMany" value="true"/>
+          <Flag name="isRestartAll" value="false"/>
+          <Flag name="isMonitor" value="true"/>
+          <Flag name="isShared" value="false"/>
+        </Flags>
+        <Variables>
+          <Args>
+            <Arg value="Argument01" ignore="false" />
+            <Arg value="Argument02" ignore="false" />
+            <Arg value="Argument03" ignore="false" />
+          </Args>
+        </Variables>
+      </Process>
+      <Process  id="test3" name="Test-3 : Valid application." path="~/kushan/localrepo/test/test1" delay="3" maxInstance="3">
+        <Flags>
+          <Flag name="isSystemCommand" value="false"/>
+          <Flag name="isKillMany" value="true"/>
+          <Flag name="isRestartAll" value="false"/>
+          <Flag name="isMonitor" value="true"/>
+          <Flag name="isShared" value="true"/>
+        </Flags>
+        <Variables>
+          <Args>
+            <Arg value="Argument01" ignore="false" />
+            <Arg value="Argument02" ignore="false" />
+            <Arg value="Argument03" ignore="false" />
+          </Args>
+        </Variables>
+      </Process>
+      <Process enable="false" name="Test-2 : No application Id." path="/bin/ps" delay="0" maxInstance="1"/>
+      <Process enable="false" name="Test-3 : Invalid application path." delay="0" maxInstance="1"/>
+      <Process ignore="true"  name="Test-4 : Ignore application." path="/bin/ps" delay="0" maxInstance="1"/>
+    </Group>
+    <Group id="my-group" description="Second application setup.">
+      <Process  id="test1" name="Test-1 : Valid application." path="~/kushan/localrepo/test/test1" delay="1" maxInstance="3">
+        <Flags>
+          <Flag name="isSystemCommand" value="false"/>
+          <Flag name="isKillMany" value="true"/>
+          <Flag name="isRestartAll" value="false"/>
+          <Flag name="isMonitor" value="true"/>
+        </Flags>
+        <Variables>
+          <Args>
+            <Arg value="Argument01" ignore="false" />
+            <Arg value="Argument02" ignore="false" />
+            <Arg value="Argument03" ignore="true" />
+            <Arg value="Argument04" ignore="false" />
+          </Args>
+          <Envs>
+            <Env value="Environmet01=X" ignore="true" />
+          </Envs>
+        </Variables>
+      </Process>
+      <Process  id="test2" name="Test-2 : Valid application." path="~/kushan/localrepo/test/test1" delay="3" maxInstance="3">
+        <Flags>
+          <Flag name="isSystemCommand" value="false"/>
+          <Flag name="isKillMany" value="true"/>
+          <Flag name="isRestartAll" value="false"/>
+          <Flag name="isMonitor" value="true"/>
+          <Flag name="isShared" value="false"/>
+        </Flags>
+        <Variables>
+          <Args>
+            <Arg value="Argument01" ignore="false" />
+            <Arg value="Argument02" ignore="false" />
+            <Arg value="Argument03" ignore="false" />
+          </Args>
+        </Variables>
+      </Process>
+      <Process  id="test3" name="Test-3 : Valid application." path="~/kushan/localrepo/test/test1" delay="3" maxInstance="3">
+        <Flags>
+          <Flag name="isSystemCommand" value="false"/>
+          <Flag name="isKillMany" value="true"/>
+          <Flag name="isRestartAll" value="false"/>
+          <Flag name="isMonitor" value="true"/>
+          <Flag name="isShared" value="true"/>
+        </Flags>
+        <Variables>
+          <Args>
+            <Arg value="Argument01" ignore="false" />
+            <Arg value="Argument02" ignore="false" />
+            <Arg value="Argument03" ignore="false" />
+          </Args>
+        </Variables>
+      </Process>
+      <Process enable="false" name="Test-2 : No application Id." path="/bin/ps" delay="0" maxInstance="1"/>
+      <Process enable="false" name="Test-3 : Invalid application path." delay="0" maxInstance="1"/>
+      <Process ignore="true"  name="Test-4 : Ignore application." path="/bin/ps" delay="0" maxInstance="1"/>
+    </Group>
+  </Groups>
+</ProcessConfigurationStore>

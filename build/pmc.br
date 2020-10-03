@@ -1,0 +1,13 @@
+#!/bin/bash
+
+echo "PMC::RELEASE:: Building client project in release mode..."
+
+mkdir -p ../out/bin/release
+
+cd ../out/bin/release
+
+g++ -pthread -g -o pmc ../../../common/*.cpp ../../../client/*.cpp ../../../../libs/pugixml/*.cpp
+
+echo "PMC::RELEASE:: Copying pmc.config to the output directory..."
+
+cp ../../../client/*.config .

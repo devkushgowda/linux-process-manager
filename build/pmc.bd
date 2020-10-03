@@ -1,0 +1,13 @@
+#!/bin/bash
+
+echo "PMC::DEBUG:: Building client project in debug mode..."
+
+mkdir -p ../out/bin/debug
+
+cd ../out/bin/debug
+
+g++ -pthread -g -o pmc ../../../common/*.cpp ../../../client/*.cpp ../../../../libs/pugixml/*.cpp
+
+echo "PMC::DEBUG:: Copying pmc.config to the output directory..."
+
+cp ../../../client/*.config .
