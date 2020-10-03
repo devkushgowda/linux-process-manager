@@ -93,7 +93,6 @@
     <TargetExt />
   </PropertyGroup>
   <ItemGroup>
-    <ClCompile Include="..\..\libs\pugixml\pugixml.cpp" />
     <ClCompile Include="..\common\base_poll_manager.cpp" />
     <ClCompile Include="..\common\cmd_def.cpp" />
     <ClCompile Include="..\common\err_def.cpp" />
@@ -105,6 +104,7 @@
     <ClCompile Include="..\common\socket_manager.cpp" />
     <ClCompile Include="..\common\sys_variant.cpp" />
     <ClCompile Include="..\common\utils.cpp" />
+    <ClCompile Include="..\libs\pugixml\pugixml.cpp" />
     <ClCompile Include="client.cpp" />
     <ClCompile Include="client_config.cpp" />
     <ClCompile Include="cli_handler.cpp" />
@@ -112,8 +112,6 @@
     <ClCompile Include="help_def.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\..\libs\pugixml\pugiconfig.hpp" />
-    <ClInclude Include="..\..\libs\pugixml\pugixml.hpp" />
     <ClInclude Include="..\common\cmd_def.hpp" />
     <ClInclude Include="..\common\common_def.h" />
     <ClInclude Include="..\common\err_def.hpp" />
@@ -128,6 +126,8 @@
     <ClInclude Include="..\common\sys_variant.hpp" />
     <ClInclude Include="..\common\utils.hpp" />
     <ClInclude Include="..\common\xmlconfig_def.h" />
+    <ClInclude Include="..\libs\pugixml\pugiconfig.hpp" />
+    <ClInclude Include="..\libs\pugixml\pugixml.hpp" />
     <ClInclude Include="client_config.hpp" />
     <ClInclude Include="cli_handler.hpp" />
     <ClInclude Include="cmd_manager.hpp" />
@@ -138,7 +138,8 @@
   </ItemGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <RemotePostBuildEvent>
-      <Command>cp  ~/$(RemoteProjectDir)/projects/client/pmc.config ~/$(RemoteProjectDir)/projects/client/bin/$(Platform)/$(Configuration)/pmc.config</Command>
+      <Command>
+      </Command>
     </RemotePostBuildEvent>
     <ClCompile>
       <AdditionalOptions>-pthread</AdditionalOptions>

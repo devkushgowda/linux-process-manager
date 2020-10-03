@@ -4,7 +4,7 @@
 #include <string>
 #include <sstream>
 
-#include "../../libs/pugixml/pugixml.hpp"
+#include "../libs/pugixml/pugixml.hpp"
 
 #include "../common/logger.hpp"
 #include "../common/utils.hpp"

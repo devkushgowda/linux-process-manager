@@ -2,10 +2,10 @@
 #define _SERVER_CONFIG_HPP_
 
 #include<sstream>
-#include"../../libs/pugixml/pugixml.hpp"
+#include "../libs/pugixml/pugixml.hpp"
 
 #include "../common/cmd_def.hpp"
-#include"../common/common_def.h"
+#include "../common/common_def.h"
 #include "../common/err_def.hpp"
 #include "../common/logger.hpp"
 #include "../common/xmlconfig_def.h"

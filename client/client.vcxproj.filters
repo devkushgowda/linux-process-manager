@@ -17,9 +17,6 @@
     <ClCompile Include="cmd_manager.cpp" />
     <ClCompile Include="help_def.cpp" />
     <ClCompile Include="client_config.cpp" />
-    <ClCompile Include="..\..\libs\pugixml\pugixml.cpp">
-      <Filter>pugixml</Filter>
-    </ClCompile>
     <ClCompile Include="..\common\base_poll_manager.cpp">
       <Filter>common</Filter>
     </ClCompile>
@@ -53,18 +50,15 @@
     <ClCompile Include="..\common\utils.cpp">
       <Filter>common</Filter>
     </ClCompile>
+    <ClCompile Include="..\libs\pugixml\pugixml.cpp">
+      <Filter>pugixml</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="cli_handler.hpp" />
     <ClInclude Include="cmd_manager.hpp" />
     <ClInclude Include="help_def.hpp" />
     <ClInclude Include="client_config.hpp" />
-    <ClInclude Include="..\..\libs\pugixml\pugiconfig.hpp">
-      <Filter>pugixml</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\libs\pugixml\pugixml.hpp">
-      <Filter>pugixml</Filter>
-    </ClInclude>
     <ClInclude Include="..\common\cmd_def.hpp">
       <Filter>common</Filter>
     </ClInclude>
@@ -106,6 +100,12 @@
     </ClInclude>
     <ClInclude Include="..\common\xmlconfig_def.h">
       <Filter>common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\libs\pugixml\pugiconfig.hpp">
+      <Filter>pugixml</Filter>
+    </ClInclude>
+    <ClInclude Include="..\libs\pugixml\pugixml.hpp">
+      <Filter>pugixml</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

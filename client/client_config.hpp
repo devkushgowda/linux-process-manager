@@ -2,7 +2,7 @@
 #define _CLIENT_CONFIG_HPP_
 
 #include<sstream>
-#include"../../libs/pugixml/pugixml.hpp"
+#include"../libs/pugixml/pugixml.hpp"
 
 #include"../common/common_def.h"
 #include "../common/err_def.hpp"

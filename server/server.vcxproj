@@ -97,7 +97,6 @@
     <AdditionalSourcesToCopyMapping>process_configuration.xml;server.config</AdditionalSourcesToCopyMapping>
   </PropertyGroup>
   <ItemGroup>
-    <ClCompile Include="..\..\libs\pugixml\pugixml.cpp" />
     <ClCompile Include="..\common\base_poll_manager.cpp" />
     <ClCompile Include="..\common\cmd_def.cpp" />
     <ClCompile Include="..\common\err_def.cpp" />
@@ -109,6 +108,7 @@
     <ClCompile Include="..\common\socket_manager.cpp" />
     <ClCompile Include="..\common\sys_variant.cpp" />
     <ClCompile Include="..\common\utils.cpp" />
+    <ClCompile Include="..\libs\pugixml\pugixml.cpp" />
     <ClCompile Include="command_handlers\base_cmd_handler.cpp" />
     <ClCompile Include="command_handlers\config_cmd_handler.cpp" />
     <ClCompile Include="command_handlers\proc_cmd_handler.cpp" />
@@ -125,8 +125,6 @@
     <ClCompile Include="xmlconfig_parser.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\..\libs\pugixml\pugiconfig.hpp" />
-    <ClInclude Include="..\..\libs\pugixml\pugixml.hpp" />
     <ClInclude Include="..\common\cmd_def.hpp" />
     <ClInclude Include="..\common\common_def.h" />
     <ClInclude Include="..\common\err_def.hpp" />
@@ -141,6 +139,8 @@
     <ClInclude Include="..\common\sys_variant.hpp" />
     <ClInclude Include="..\common\utils.hpp" />
     <ClInclude Include="..\common\xmlconfig_def.h" />
+    <ClInclude Include="..\libs\pugixml\pugiconfig.hpp" />
+    <ClInclude Include="..\libs\pugixml\pugixml.hpp" />
     <ClInclude Include="command_handlers\base_cmd_handler.hpp" />
     <ClInclude Include="command_handlers\config_cmd_handler.hpp" />
     <ClInclude Include="command_handlers\proc_cmd_handler.hpp" />
@@ -194,10 +194,12 @@
       </AdditionalSourcesToCopyMapping>
     </PreBuildEvent>
     <RemotePostBuildEvent>
-      <Command>cp  ~/$(RemoteProjectDir)/projects/server/process_configuration.xml ~/$(RemoteProjectDir)/projects/server/bin/$(Platform)/$(Configuration)/process_configuration.xml</Command>
+      <Command>
+      </Command>
     </RemotePostBuildEvent>
     <RemotePreLinkEvent>
-      <Command>cp  ~/$(RemoteProjectDir)/projects/server/pms.config ~/$(RemoteProjectDir)/projects/server/bin/$(Platform)/$(Configuration)/pms.config</Command>
+      <Command>
+      </Command>
     </RemotePreLinkEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">

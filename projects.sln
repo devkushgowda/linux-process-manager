@@ -7,6 +7,15 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "client", "client\client.vcx
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "server", "server\server.vcxproj", "{489BEB2E-676F-4DC6-B87B-BD618D788098}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "libs", "libs", "{9091E076-82A7-4640-A532-43C27A35DFBE}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "pugixml", "pugixml", "{F48CBEC4-D175-4C7C-B07F-DF8A27D963F3}"
+	ProjectSection(SolutionItems) = preProject
+		..\libs\pugixml\pugiconfig.hpp = ..\libs\pugixml\pugiconfig.hpp
+		..\libs\pugixml\pugixml.cpp = ..\libs\pugixml\pugixml.cpp
+		..\libs\pugixml\pugixml.hpp = ..\libs\pugixml\pugixml.hpp
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|ARM = Debug|ARM
@@ -70,6 +79,9 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{F48CBEC4-D175-4C7C-B07F-DF8A27D963F3} = {9091E076-82A7-4640-A532-43C27A35DFBE}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {7AB0754C-B533-4229-83E4-7638BBA2F11C}

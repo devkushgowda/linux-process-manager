@@ -43,9 +43,6 @@
     <ClCompile Include="server.cpp" />
     <ClCompile Include="server_config.cpp" />
     <ClCompile Include="xmlconfig_parser.cpp" />
-    <ClCompile Include="..\..\libs\pugixml\pugixml.cpp">
-      <Filter>pugixml</Filter>
-    </ClCompile>
     <ClCompile Include="..\common\shm_templates.cpp" />
     <ClCompile Include="..\common\base_poll_manager.cpp">
       <Filter>common</Filter>
@@ -77,6 +74,9 @@
     <ClCompile Include="..\common\utils.cpp">
       <Filter>common</Filter>
     </ClCompile>
+    <ClCompile Include="..\libs\pugixml\pugixml.cpp">
+      <Filter>pugixml</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="command_handlers\config_cmd_handler.hpp">
@@ -100,12 +100,6 @@
     <ClInclude Include="request_handler.hpp" />
     <ClInclude Include="server_config.hpp" />
     <ClInclude Include="xmlconfig_parser.hpp" />
-    <ClInclude Include="..\..\libs\pugixml\pugiconfig.hpp">
-      <Filter>pugixml</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\libs\pugixml\pugixml.hpp">
-      <Filter>pugixml</Filter>
-    </ClInclude>
     <ClInclude Include="shmclass\SmppInfo.hpp">
       <Filter>ShmClass</Filter>
     </ClInclude>
@@ -150,6 +144,12 @@
     </ClInclude>
     <ClInclude Include="..\common\xmlconfig_def.h">
       <Filter>common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\libs\pugixml\pugiconfig.hpp">
+      <Filter>pugixml</Filter>
+    </ClInclude>
+    <ClInclude Include="..\libs\pugixml\pugixml.hpp">
+      <Filter>pugixml</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
